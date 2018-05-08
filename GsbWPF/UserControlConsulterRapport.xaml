@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="GsbWPF.UserControlConsulterRapport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GsbWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500" Loaded="UserControl_Loaded">
+    <Grid>
+        <materialDesign:TransitioningContent  x:Name="TransitioningContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1}">
+            <Grid>
+                <Label Content="Numéro rapport" HorizontalAlignment="Left" Margin="31,12,0,0" VerticalAlignment="Top" FontSize="18" Width="138"/>
+                <Label Content="Praticiens" HorizontalAlignment="Left" Margin="83,63,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <Label Content="Date rapport" HorizontalAlignment="Left" Margin="57,99,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <Label Content="Motif visite" HorizontalAlignment="Left" Margin="71,138,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <Label Content="Bilan" HorizontalAlignment="Left" Margin="120,174,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <TextBox x:Name="tbx_NRapport" HorizontalAlignment="Left" Height="23" Margin="174,19,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="88"/>
+                <TextBox x:Name="tbx_praticien" HorizontalAlignment="Left" Height="23" Margin="174,69,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="154"/>
+                <TextBox x:Name="tbx_date" HorizontalAlignment="Left" Height="22" Margin="174,107,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="154"/>
+                <TextBox x:Name="tbx_motif" HorizontalAlignment="Left" Height="22" Margin="174,144,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="154"/>
+                <RichTextBox x:Name="rtbx_bilan" IsEnabled="False" HorizontalAlignment="Left" Height="128" Margin="174,188,0,0" VerticalAlignment="Top" Width="242" FontSize="18">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run />
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <Button x:Name="btn_prec" Content="PRECEDENT" HorizontalAlignment="Left" Background="RoyalBlue" BorderBrush="{x:Null}" Margin="73,339,0,0" VerticalAlignment="Top" Width="193" Height="74" FontSize="18" Click="btn_prec_Click"/>
+                <Button x:Name="btn_suiv" Content="SUIVANT" HorizontalAlignment="Left" Background="RoyalBlue" BorderBrush="{x:Null}" Margin="297,339,0,0" VerticalAlignment="Top" Width="193" Height="74" FontSize="18" Click="btn_suiv_Click"/>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

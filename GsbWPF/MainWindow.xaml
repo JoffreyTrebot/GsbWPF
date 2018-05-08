@@ -1,0 +1,72 @@
+﻿<Window x:Class="GsbWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GsbWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid MouseDown="Grid_MouseDown">
+        <StackPanel>
+            <Grid Background="RoyalBlue" Height="50">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <Button Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonClose_Click">
+                        <Image Source="Assets/error.png" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Margin="250 55 0 0">
+            <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+        </Grid>
+        <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
+            <materialDesign:TransitioningContent  x:Name="TransitioningContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.2}">
+                <Grid x:Name="GridCursor" Margin="0 100 0 0" VerticalAlignment="Top" Background="RoyalBlue" Width="10" HorizontalAlignment="Left" Height="60"/>
+            </materialDesign:TransitioningContent>
+            <ListView x:Name="ListViewMenu" Margin="0,100,0,100" Foreground="LightGray" Background="#FF222222" HorizontalAlignment="Center" BorderBrush="{x:Null}" SelectionChanged="ListViewMenu_SelectionChanged" Width="250">
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/006-shapes.png"></Image>
+                        <TextBlock Text="Nouveau Rapport" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/005-consulting-message.png"></Image>
+                        <TextBlock Text="Consulter Rapport" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/002-doctor.png"></Image>
+                        <TextBlock Text="Praticiens" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/004-pills.png"></Image>
+                        <TextBlock Text="Médicaments" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/003-users.png"></Image>
+                        <TextBlock Text="Visiteurs" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60" Background="#1a1a1a">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" VerticalAlignment="Center" Margin="5" Source="Assets/001-stop-or-prohibition-sign.png"></Image>
+                        <TextBlock Text="Déconnexion" FontSize="20" VerticalAlignment="Center" Margin="10 0" FontFamily="Verdona Pro" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="82" Margin="73,10,0,0" VerticalAlignment="Top" Width="116" Source="Assets/gsblogo.png"/>
+        <Label Content="by Trébot Joffrey" Foreground="White" HorizontalAlignment="Left" Height="28" Margin="73,562,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

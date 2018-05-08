@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="GsbWPF.UserControlVisiteurs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GsbWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600" Loaded="UserControl_Loaded">
+    <Grid>
+        <materialDesign:TransitioningContent  x:Name="TransitioningContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:1}">
+            <Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="1,47,-1,0" >
+                    <TextBox Width="100" IsEnabled="False" Visibility="Hidden" x:Name="tbx_num" Margin="5" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="1,47,-1,0">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="Nom" FontSize="18"/>
+                        <TextBox Width="150" IsEnabled="False" x:Name="tbx_Nom" FontSize="18" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="Prénom" FontSize="18" />
+                        <TextBox Width="150" IsEnabled="False" x:Name="tbx_Prenom" FontSize="18"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="11,107,9,0">
+                    <Label Content="Adresse" FontSize="18"/>
+                    <TextBox Width="300" IsEnabled="False" x:Name="tbx_Adresse" FontSize="18"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="11,157,9,0">
+                    <Label Content="Ville" FontSize="18"/>
+                    <TextBox x:Name="tbx_CP" IsEnabled="False" FontSize="18"  Width="150"/>
+                    <TextBox x:Name="tbx_Ville" IsEnabled="False" FontSize="18"  Width="300" Margin="20 0 0 0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="top" Margin="11,207,9,0">
+                    <Label Content="Secteur" FontSize="18" />
+                    <TextBox x:Name="tbx_secteur" IsEnabled="False"  FontSize="18" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="top" Margin="11,257,9,0">
+                    <Label Content="Labo" FontSize="18" />
+                    <TextBox x:Name="tbx_labo" IsEnabled="False"  FontSize="18" Width="150"/>
+                </StackPanel>
+                <Button x:Name="btn_prec" Content="PRECEDENT" HorizontalAlignment="Left" Background="RoyalBlue" BorderBrush="{x:Null}" Margin="73,339,0,0" VerticalAlignment="Top" Width="193" Height="74" FontSize="18" Click="btn_prec_Click"/>
+                <Button x:Name="btn_suiv" Content="SUIVANT" HorizontalAlignment="Left" Background="RoyalBlue" BorderBrush="{x:Null}" Margin="297,339,0,0" VerticalAlignment="Top" Width="193" Height="74" FontSize="18" Click="btn_suiv_Click"/>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
